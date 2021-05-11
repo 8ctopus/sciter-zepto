@@ -1,10 +1,8 @@
 # sciter zepto demo app
 
-This is a [sciter.js](https://sciter.com/) demo app that explores the use of [zepto](https://zeptojs.com/).
+This is a [sciter.js](https://sciter.com/) demo app that explores the use of [zepto](https://zeptojs.com/) as a jQuery alternative.
 
-## rationale
-
-jQuery does not work in Sciter as JQuery was designed to support specific browsers. Zepto is a minimalist JavaScript library with a largely jQuery-compatible API. If you use jQuery, you already know how to use Zepto.
+jQuery does not work in Sciter as jQuery was designed to support specific browsers. Zepto is a minimalist JavaScript library with a largely jQuery-compatible API. If you use jQuery, you already know how to use Zepto.
 
 ## get started
 
