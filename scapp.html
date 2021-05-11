@@ -1,0 +1,31 @@
+<html
+    window-resizable="true"
+    window-width="800dip"
+    window-height="600dip"
+>
+<head>
+<title>sciter zepto demo</title>
+<script src="js/zepto.js" />
+<script>
+
+document.ready = function() {
+    console.log("document ready");
+
+    let element = $("p");
+
+    element.addClass("red");
+};
+
+</script>
+<style>
+
+.red {
+    color: red;
+}
+
+</style>
+</head>
+<body>
+    <p>Hello, World!</p>
+</body>
+</html>
