@@ -8,6 +8,7 @@
 <script src="js/zepto.js" />
 <script>
 
+// does not work Zepto(function($){
 document.ready = function() {
     console.log("document ready");
 
@@ -15,12 +16,30 @@ document.ready = function() {
 
     element.addClass("red");
 
+    // works
+    element.toggleClass("red");
+    element.toggleClass("red");
+
+    // works
+    console.log("dimensions: " + element.width() + " x " + element.height());
+
+    // works
+    element.text("Hello, World!");
+
+    // works
+    console.log("hasClass: " + element.hasClass("red"));
+
+    // works
+    console.log("attribute: " + element.attr("data"));
+
     // does not work
     //element.css("color", "#0088ff");
 
     // does not work
     //element.css({ backgroundColor: '#8EE', fontSize: 28 })
 
+    // does not work
+    //element.hide();
 };
 
 </script>
@@ -33,6 +52,6 @@ document.ready = function() {
 </style>
 </head>
 <body>
-    <p>Hello, World!</p>
+    <p data="test">Hello!</p>
 </body>
 </html>
