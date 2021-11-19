@@ -4,12 +4,13 @@ This is a [sciter.js](https://sciter.com/) demo app that explores the use of [ze
 
 jQuery does not work in Sciter as jQuery was designed to support specific browsers. Zepto is a minimalist JavaScript library with a largely jQuery-compatible API. If you use jQuery, you already know how to use Zepto.
 
-## get started
+## demo
 
 - git clone the repository
-- run `install.bat` to download the latest sciter binaries and library
-- start `start.bat`
-- to refresh the app after changes to the html/css click `F5`
+- on Linux/Mac `chmod +x install.sh start.sh`
+- run `install.bat` (Win) or `./install.sh` (Linux/Mac) to download the latest sciter binaries and the sciter package manager
+- install packages `php bin/spm.phar install`
+- run `start.bat` (Win) or `./start.sh` (Linux/Mac)
 
 ## debug app
 
