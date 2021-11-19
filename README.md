@@ -8,7 +8,7 @@ jQuery does not work in Sciter as jQuery was designed to support specific browse
 
 - git clone the repository
 - run `install.bat` to download the latest sciter binaries and library
-- start `scapp.bat`
+- start `start.bat`
 - to refresh the app after changes to the html/css click `F5`
 
 ## debug app
