@@ -9,6 +9,10 @@
 
 @import url(node_modules/sciter-logger/src/logger.css);
 
+.red {
+    color: red;
+}
+
 </style>
 <script src="js/zepto.js" />
 <script type="module">
@@ -43,8 +47,8 @@ document.on("ready", function() {
     Utils.centerWindow(Window.this, "screen");
 
     // bring window to front and set input focus
-    if (Window.this.activate(true))
-        console.log("Activate window - OK");
+    if (!Window.this.activate(true))
+        console.error("Activate window - FAILED");
 
     console.log("document ready");
 
@@ -60,7 +64,7 @@ document.on("ready", function() {
     console.log("dimensions: " + element.width() + " x " + element.height());
 
     // works
-    element.text("Hello, World!");
+    element.text("Hello World from Zepto!");
 
     // works
     console.log("hasClass: " + element.hasClass("red"));
@@ -79,16 +83,9 @@ document.on("ready", function() {
 });
 
 </script>
-<style>
-
-.red {
-    color: red;
-}
-
-</style>
 </head>
 <body>
-    <p data="test">Hello!</p>
+    <p data="test">No Zepto</p>
     <plaintext #logger readonly />
 </body>
 </html>
