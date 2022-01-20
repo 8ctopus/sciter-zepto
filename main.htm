@@ -5,13 +5,47 @@
 >
 <head>
 <title>sciter zepto demo</title>
-<script src="js/logger.js" />
-<script src="js/utils.js" />
+<style>
+
+@import url(node_modules/sciter-logger/src/logger.css);
+
+</style>
 <script src="js/zepto.js" />
-<script>
+<script type="module">
+
+import Logger from "node_modules/sciter-logger/src/logger.js";
+import * as Utils from "node_modules/sciter-utils/src/utils.js";
+
+// initialize logger
+Logger.init();
+
+// attach logger to console
+Logger.attach();
+
+// capture unhandled exceptions
+Logger.capture();
 
 // does not work Zepto(function($){
 document.on("ready", function() {
+    // subscribe to logger messages
+    Logger.plaintext(document.$("plaintext#logger"));
+
+    // log sciter version
+    console.debug(Utils.sciterInfo());
+
+    // add support for F5 reload
+    Utils.addReloadWindow();
+
+    // close window on escape key press
+    Utils.closeWindowOnEscape(Window.this);
+
+    // center window on screen
+    Utils.centerWindow(Window.this, "screen");
+
+    // bring window to front and set input focus
+    if (Window.this.activate(true))
+        console.log("Activate window - OK");
+
     console.log("document ready");
 
     let element = $("p");
@@ -55,6 +89,6 @@ document.on("ready", function() {
 </head>
 <body>
     <p data="test">Hello!</p>
-    <plaintext #logger />
+    <plaintext #logger readonly />
 </body>
 </html>
