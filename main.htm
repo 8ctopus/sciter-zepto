@@ -13,6 +13,10 @@
     color: red;
 }
 
+.green {
+    color: green;
+}
+
 </style>
 <script src="js/zepto.js" />
 <script type="module">
@@ -54,22 +58,13 @@ document.on("ready", function() {
 
     const element = $("p");
 
-    element.addClass("red");
-
-    // works
-    element.toggleClass("red");
-    element.toggleClass("red");
-
-    // works
-    console.log("dimensions: " + element.width() + " x " + element.height());
-
-    // works
     element.text("Hello World from Zepto!");
 
-    // works
-    console.log("hasClass: " + element.hasClass("red"));
+    element.toggleClass("red");
+    element.addClass("green");
 
-    // works
+    console.log("dimensions: " + element.width() + " x " + element.height());
+    console.log("hasClass: " + element.hasClass("red"));
     console.log("attribute: " + element.attr("data"));
 
     // does not work
@@ -85,7 +80,7 @@ document.on("ready", function() {
 </script>
 </head>
 <body>
-    <p data="test">No Zepto</p>
+    <p data="test" class="red">No Zepto</p>
     <plaintext #logger readonly />
 </body>
 </html>
