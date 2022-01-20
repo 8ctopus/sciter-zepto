@@ -11,7 +11,7 @@
 <script>
 
 // does not work Zepto(function($){
-document.ready = function() {
+document.on("ready", function() {
     console.log("document ready");
 
     let element = $("p");
@@ -42,7 +42,7 @@ document.ready = function() {
 
     // does not work
     //element.hide();
-}
+});
 
 </script>
 <style>
