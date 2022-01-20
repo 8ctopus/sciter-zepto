@@ -7,13 +7,13 @@ jQuery does not work in Sciter as jQuery was designed to support specific browse
 ## demo
 
 - git clone the repository
-- on Linux/Mac `chmod +x install.sh start.sh`
-- run `install.bat` (Win) or `./install.sh` (Linux/Mac) to download the latest sciter binaries and the sciter package manager
-- install packages `php bin/spm.phar install`
-- run `start.bat` (Win) or `./start.sh` (Linux/Mac)
+- install packages `npm install`
+- install latest sciter sdk `npm run install-sdk`
+- start the demo `npm run scapp`
 
-## debug app
+## demo requirements
 
-- start `inspector.exe`
-- inside the `scapp.exe` window click `CTRL + SHIFT + I` to connect to the inspector
-- click `CTRL + SHIFT + left click` to inspect an element
+- A recent version of Node.js `node` (tested with 16 LTS) and its package manager `npm`.
+    - On Windows [download](https://nodejs.dev/download/) and run the installer
+    - On Linux check the [installation guide](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04#option-2-%E2%80%94-installing-node-js-with-apt-using-a-nodesource-ppa)
+
