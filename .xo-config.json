@@ -29,6 +29,9 @@
         "htm",
         "html"
     ],
+    "ignores": [
+        "js"
+    ],
     "rules": {
         "arrow-spacing": "error",
         "block-spacing": "error",
