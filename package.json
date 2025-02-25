@@ -1,6 +1,6 @@
 {
   "name": "sciter-zepto",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This is a [sciter.js](https://sciter.com/) demo app that explores the use of [zepto](https://zeptojs.com/) as a jQuery alternative.",
   "scripts": {
     "install-sdk": "node ./node_modules/sciter-sandbox/scripts/install.mjs cleanup",
